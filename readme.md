@@ -23,7 +23,6 @@ To use the Balloon Confetti Celebration package, you need to include the require
 Add the following HTML elements to your page:
 
 ```html
-<button id="celebrate">Celebrate</button>
 <div id="balloon-confetti-celebration"></div>
 ```
 
@@ -51,12 +50,9 @@ Add the following HTML elements to your page:
         }
     };
 
-    const celebrateButton = document.getElementById("celebrate");
-    celebrateButton.addEventListener('click', () => {
-        const celebrationManager = new CelebrationManager(options);
-        celebrationManager.setupConfettiCanvas();
-        celebrationManager.startCelebration();
-    }, false);
+    const celebrationManager = new CelebrationManager(options);
+    celebrationManager.setupConfettiCanvas();
+    celebrationManager.startCelebration();
 </script>
 ```
 ### Configuration Options
@@ -125,3 +121,11 @@ Add the following HTML elements to your page:
 </body>
 </html>
 ```
+
+## Preview
+
+![image](https://github.com/user-attachments/assets/10d32c46-571f-48c6-a156-74f4945b497c)
+
+## StackBlitz
+
+[Example Code](https://stackblitz.com/edit/stackblitz-starters-9wzfjc)

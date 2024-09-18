@@ -1,7 +1,11 @@
 {
   "name": "balloon-confetti-celebration",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Balloon and confetti animation package for celebrations",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omergocmen/balloon-confetti-celebration"
+  },
   "main": "index.js",
   "type": "module",
   "scripts": {
