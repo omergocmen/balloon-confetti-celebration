@@ -120,3 +120,8 @@ Add the following HTML elements to your page:
 </body>
 </html>
 ```
+
+## Preview
+
+![image](https://github.com/user-attachments/assets/10d32c46-571f-48c6-a156-74f4945b497c)
+
