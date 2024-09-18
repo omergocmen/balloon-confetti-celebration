@@ -23,7 +23,6 @@ To use the Balloon Confetti Celebration package, you need to include the require
 Add the following HTML elements to your page:
 
 ```html
-<button id="celebrate">Celebrate</button>
 <div id="balloon-confetti-celebration"></div>
 ```
 
@@ -50,13 +49,9 @@ Add the following HTML elements to your page:
             flipSpeed: 0.017,
         }
     };
-
-    const celebrateButton = document.getElementById("celebrate");
-    celebrateButton.addEventListener('click', () => {
-        const celebrationManager = new CelebrationManager(options);
-        celebrationManager.setupConfettiCanvas();
-        celebrationManager.startCelebration();
-    }, false);
+    const celebrationManager = new CelebrationManager(options);
+    celebrationManager.setupConfettiCanvas();
+    celebrationManager.startCelebration();
 </script>
 ```
 ### Configuration Options
