@@ -49,7 +49,6 @@ Add the following HTML elements to your page:
             flipSpeed: 0.017,
         }
     };
-
     const celebrationManager = new CelebrationManager(options);
     celebrationManager.setupConfettiCanvas();
     celebrationManager.startCelebration();
