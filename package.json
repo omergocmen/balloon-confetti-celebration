@@ -1,0 +1,12 @@
+{
+  "name": "balloon-confetti-celebration",
+  "version": "1.0.4",
+  "description": "Balloon and confetti animation package for celebrations",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'Building...' && exit 0"
+  },
+  "author": "Ömer Göçmen",
+  "license": "MIT"
+}

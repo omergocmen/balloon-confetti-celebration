@@ -1,0 +1,123 @@
+canvas {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+}
+
+#balloon-container {
+    height: 100vh;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: opacity 500ms;
+}
+
+.balloon {
+    height: 125px;
+    width: 125px;
+    position: relative;
+    cursor: url(https://cdn-icons-png.flaticon.com/32/2972/2972166.png) 0 32, pointer;
+    box-shadow: inset -10px -10px 30px rgba(0, 0, 0, 0.2), inset 10px 10px 20px rgba(255, 255, 255, 0.5), 0 10px 15px rgba(0, 0, 0, 0.3);
+    background: radial-gradient(ellipse farthest-corner at left bottom, #7C601F 3%, #EDC969 5%, #7C601F 17%, #8A6E31 40%, transparent 60%), radial-gradient(ellipse farthest-corner at top right, #FFFFFE 0%, #FFFFAB 17%, #D1B464 40%, #7C601F 80%);
+    border-radius: 50% 70% 50% 70%/50% 70% 10%;
+}
+
+.balloon:after {
+    content: "🎗";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    right: -6px;
+    margin: auto;
+    bottom: -1px;
+    font-size: 13px;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh) rotate(var(--rotate-angle, 0deg));
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-300vh) rotate(calc(var(--rotate-angle, 0deg) + var(--rotate-speed, 0deg)));
+        opacity: 0.8;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(1.5);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(30px) scale(1);
+    }
+
+    80% {
+        transform: translateY(-10px) scale(1.1);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.celebrationmodal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    animation: bounceIn 0.75s;
+    background-color: rgba(55, 71, 79, .5);
+}
+
+.celebrationmodal .celebrationmodal-container {
+    padding: 3rem 5rem;
+    background-color: #fff;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    border-radius: 10px;
+    box-shadow: 0 3px 30px rgba(0, 0, 0, 0.2);
+    background-repeat: round;
+}
+
+@media (max-width: 768px) {
+    .celebrationmodal .celebrationmodal-container {
+        width: 170px;
+        height: 260px;
+    }
+}
+
+.celebration-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.celebration-close button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.celebration-close button:hover {
+    color: #000;
+}
