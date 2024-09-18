@@ -1,6 +1,7 @@
 # Balloon Confetti Celebration
 
 ## Explanation
+The animation begins with a modal appearing, and you can set the delay before this modal shows up. After that, balloons rise upwards, and confetti bursts into the air. When you hover over the balloons, a needle icon appears. If you double-click on a balloon with this icon, it pops, and confetti flies out from the point where the balloon burst.
 
 ## Overview
 
